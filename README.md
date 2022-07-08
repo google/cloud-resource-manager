@@ -1,7 +1,15 @@
-# New Project Template
+# Cloud Resource Manager (via gcloud)
 
-This repository contains a template that can be used to seed a repository for a
-new Google open source project.
+Before deleting a Google Workspace account, the super admin must first delete all associated Google Cloud projects, folders, and Access Context Manager policies. If you want to find resources associated with your Cloud organization, you can either go to console.cloud.google.com > IAM & Admin > Manage Resources, OR use this script to programmatically interact with your resources.  The super admin will need the Organization Administrator, Folder Admin, Project Deleter, and Policy Editor Roles to modify project, folder, and policy resources.
+
+Furthermore if your Cloud organization has Apps Script Projects, you need to delete them along with other Cloud projects before you can delete the Google Workspace account. The most common associated error message is:
+
+```
+"You have active projects in Google Cloud Platform. You need to delete all GCP projects before you can delete this account"
+```
+
+If used correctly, the script will first bind the necessary IAM permissions to your user, then guide you through deletions/restorations.
+
 
 See [go/releasing](http://go/releasing) (available externally at
 https://opensource.google/docs/releasing/) for more information about
@@ -9,25 +17,6 @@ releasing a new Google open source project.
 
 This template uses the Apache license, as is Google's default.  See the
 documentation for instructions on using alternate license.
-
-## How to use this template
-
-1. Clone it from GitHub.
-    * There is no reason to fork it.
-1. Create a new local repository and copy the files from this repo into it.
-1. Modify README.md and docs/contributing.md to represent your project, not the
-   template project.
-1. Develop your new project!
-
-``` shell
-git clone https://github.com/google/new-project
-mkdir my-new-thing
-cd my-new-thing
-git init
-cp -r ../new-project/* ../new-project/.github .
-git add *
-git commit -a -m 'Boilerplate for new Google open source project'
-```
 
 ## Source Code Headers
 
