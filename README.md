@@ -9,3 +9,9 @@ Furthermore if your Cloud organization has Apps Script Projects, you need to del
 ```
 
 If used correctly, the script will first bind the necessary IAM permissions to your user, then guide you through deletions/restorations.
+
+To use this script, run the following from a cloud shell instance:
+```
+git clone https://github.com/google/cloud-resource-manager.git 
+bash cloud-resource-manager/cloud-resource-manager.sh
+```
