@@ -8,9 +8,10 @@ Furthermore if your Cloud organization has Apps Script Projects, you need to del
 "You have active projects in Google Cloud Platform. You need to delete all GCP projects before you can delete this account"
 ```
 
-If used correctly, the script will first bind the necessary IAM permissions to your user, then guide you through deletions/restorations.
+If used correctly, the script will first bind the necessary IAM permissions to your user, then guide you through deletions/restorations if necessary.
 
-To use this script, run the following from a cloud shell instance:
+To use this script, first navigate to a cloud shell instance from **within a project**. Running this script from the **Organization level** will result in a **PERMISSION_DENIED** error. Then, run the following to clone this repository and run the .sh file:
+
 ```
 git clone https://github.com/google/cloud-resource-manager.git 
 bash cloud-resource-manager/cloud-resource-manager.sh
