@@ -16,3 +16,5 @@ To use this script, first navigate to a cloud shell instance from **within a pro
 git clone https://github.com/google/cloud-resource-manager.git 
 bash cloud-resource-manager/cloud-resource-manager.sh
 ```
+
+If you have already removed all the projects you can create a temporary one from which to run this script.
